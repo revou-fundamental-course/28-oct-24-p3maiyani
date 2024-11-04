@@ -1,1 +1,117 @@
-/* CSS */
+/* ini CSS */
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.article {
+    max-width: 600px;
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-wrap: break-word; /* Atur teks panjang untuk wrap */
+}
+
+.padding-left{
+    line-height: 1.6;
+    padding-left: 60px;
+    padding-bottom: 20px;
+
+}
+
+.left-section{
+    flex: 1;
+    padding: 1;
+    margin-left: 0;
+}
+
+.right-section{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.color-section{
+    margin: auto;
+    /* padding: 20px; */
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+button{
+    border: 0;
+    background-color: aquamarine;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.download-section {
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space below the section */
+  }
+
+.download-title{
+    font-size: 24px; /* Ukuran font judul */
+    margin-bottom: 10px; /* Jarak antara judul dan ikon */
+    color: #333; /* Warna teks judul */
+}
+
+.store-buttons {
+    display: inline-flex;
+    gap: 10px;  /*jarak antar tombol */
+    align-items: center; /* Vertikal sejajar di tengah */
+    justify-content: center; /* Horizontal sejajar di tengah */
+    padding-left: 60px;
+  }
+
+.store-button {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    display: inline-block; /* Pastikan elemen tetap dalam satu baris */
+  }
+
+.store-button img{
+    width: 150px; /* Atur ukuran ikon */
+    transition: transform 0.3s;
+    margin: 0;
+    padding: 0;
+  }
+
+.store-button img:hover {
+    transform: scale(1.05); /* Efek memperbesar ikon ketika hover */
+  }
+
+.store-button {
+    text-decoration: none;
+  }
+
+#result{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+}
+

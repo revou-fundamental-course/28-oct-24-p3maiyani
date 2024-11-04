@@ -3,65 +3,141 @@
 <head>
 <title>Calculator BMI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div>
-<table border="0">
-    <form target="_self">
-        <tr>
-            <td>Jenis Kelamin</td>
-        </tr>
-        <tr>
-            <td>
-                <input type="radio" id="pria" value="PRIA"> Pria
-                <input type="radio" id="wanita" value="WANITA">Wanita
-            </td>
-        </tr>
-        <tr>    
-            <td> <label for="berat">Berat Badan(kg)</label></td>
-        </tr>
-        <tr>
-            <td>
-                <i style="font-size:20px" class="fa">&#xf040;</i>
-                <input type="text" id="berat" name="berat">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="usia">Usia (tahun)</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <i style="font-size:20px" class="fa">&#xf040;</i>
-                <input type="text" id="usia" name="usia">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="tinggi">Tinggi Badan (cm)</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <i style="font-size:20px" class="fa">&#xf040;</i>
-                <input type="text" id="tinggi" name="tinggi">
-             </td>
-        </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr>
-            <td>
-                <button type="button" onclick="" id="hitungbmi">Hitung BMI</button>
-                <button type="button" onclick="" id="reset">Reset</button>
-            </td>
-        </tr>
+    <main>
+    <!-- section form  -->
+    <section class="left-section">
+        <div class="article">
+            <header>
+                <H1> Kalkulator BMI </H1>
+            </header>
+
+            <article>
+                <p>
+                Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh
+                yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                Bagaimana denganmu? Yuk, hitung sekarang dikalkulator BMI.
+
+                </p>
+            </article>
+        </div>
+
+        
+        <form class="color-section" id="bmiForm" onclick="">
+            <!-- <div>
+                <label for="">Berat</label>
+                <input type="number" id="berat">
+            </div>
+            <button>Hitung BMI</button>
+            <button>Reset</button> -->
+                    <div class="padding-left">
+                    <label for="">Jenis Kelamin</label>   <br>
+                    
+                    <input type="radio" id="pria" value="Pria" name="jenkel" required> Pria
+                    <input type="radio" id="wanita" value="Wanita" name="jenkel" required>Wanita
+                    </div>
+                    
+                    <div class="padding-left">    
+                        <label for="berat">Berat Badan(kg)</label>
+                        <input type="number" id="berat" name="berat" required>
+                  
+                    
+                        <label for="usia">Usia (tahun)</label>
+                        <input type="number" id="usia" name="usia" required>
+                
+                        <label for="tinggi">Tinggi Badan (cm)</label>
+                        <input type="number" id="tinggi" name="tinggi" required>
+                    </div>
+                    
+                            <!-- <button type="submit">Hitung BMI</button> -->
+                            <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                            <button type="reset" id="reset">Reset</button>                
+        
+        </form>
+   
+
+        <div class="article">
+            <header>
+                <h2>Keunggulan Fitur</h2>
+            </header>
+            <article>
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p> 
+                    Kalkulator ini hanya boleh digunakan oleh orang dewasa(wanita hamil atau menyusui tidak boleh
+                    mengandalkan pembacaan BMI ini)dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+                    selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                </p>
+                <p>
+                    Kalkulator akan memberi anda gambaran tentang perbandingan berat badan Anda dengan nilai umum.
+                    Indeks Massa Tubuh(atau BMI)dihitung sebagai berat badan Anda(dalam kilogram)dibagi dengan 
+                    kuadrat tinggi badan Anda(dalam meter) atau BMI = Kg/M<sup>2</sup>
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
 
 
-    </form>
-</table>
-</div>
+    <!-- Section Result -->
 
+    <section class="right-section">
+        <!-- <header>
+            <h1> Hasil </h1>
+        </header> -->
+        <!-- Hasil Kalkulator -->
+
+        <div class="color-section text-center" id ="result">
+            <!-- <h4>Berat Badan</h4> -->
+
+            <!-- <p id="result">24,5</p> -->
+        </div>
+
+        <!-- info dari Hasil-->
+        <div class="article">
+         <article>
+            <p> Hasil BMI </p>
+            <p>
+                penjelasan hasil
+            </p><!--  pakai js -->
+            <p>
+                BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
+                seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan khawatiran Anda terkait dengan
+                berat badan Anda.
+            </p>
+         </article>
+
+        </div>
+        <div class="download-section">
+            <h4 class="download-title">Download Aplikasi</h4> 
+
+            <div class="store-buttons">
+                <a href="https://play.google.com/store" target="_blank" class="store-button playstore">
+                    <img src="asset/playstore.png" alt="Download on Play Store" class="">
+                </a> 
+                <a href="https://www.apple.com/app-store/" target="_blank" class="store-button appstore">
+                    <img src="asset/App_Store.png" alt="Download on App Store" class="">
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    </main>
+
+    <footer>
+        <span> Made by p3my</span>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
+
 </html> 
