@@ -3,9 +3,6 @@
 
 function calculateBMI() {
 
-    // Mencegah halaman reload ketika submit form
-    //event.preventDefault();
-
     // Mengambil nilai dari input form
     const berat = parseFloat(document.getElementById("berat").value);
     const tinggi = parseFloat(document.getElementById("tinggi").value) / 100; // Konversi cm ke meter
@@ -20,7 +17,6 @@ function calculateBMI() {
         document.getElementById("adviceBMI").textContent = "";
         return;
     }
-
 
 
     // Perhitungan BMI
@@ -44,9 +40,7 @@ function calculateBMI() {
         advice ="Hasil BMI Anda menunjukan obesitas. Sebaiknya Anda menjaga pola makan sehat dan berkonsultasi dengan profesional untuk bimbingan lebih lanjut.";
     }
 
-    // Menampilkan hasil
-    // document.getElementById("resultBMI").innerText = `BMI Anda: ${bmi.toFixed(1)} (${category})`;
-
+   
     const header = document.createElement("h3");
     header.textContent = `Hasil Perhitungan BMI (${gender})`;
 
@@ -64,6 +58,4 @@ function calculateBMI() {
      resultBMIDiv.appendChild(resultBMIText);
      document.getElementById("adviceBMI").textContent = advice;
      
-    // const resultBMIDiv = document.getElementById("resultBMI");
-    // resultBMIDiv.innerHTML = `Hasil BMI ${roundedBMI} <br> Anda memiliki berat badan ${category}`;
 }
