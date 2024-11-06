@@ -42,6 +42,8 @@ main{
     padding-bottom: 20px;
     border-radius: 8px;
     background-color: aliceblue;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 13px;
     
 }
 
@@ -62,10 +64,19 @@ input[type=number] {
 
 button{
     border: 0;
-    background-color: aquamarine;
-    padding: 8px;
+    background-color: cornflowerblue;
+    padding: 15px 30px;
     border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 13px;
+    margin: 4px 2px;
+    color: white;
 }
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
 .download-section {
     text-align: center; /* Center text */

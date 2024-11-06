@@ -12,6 +12,7 @@
         <div class="article">
             <header>
                 <H1> Kalkulator BMI </H1>
+                <script src="js/script.js"></script>
             </header>
 
             <article>
@@ -25,7 +26,7 @@
         </div>
 
         
-        <form class="color-section" id="bmiForm" onclick="">
+        <form class="color-section" id="bmiForm" >
             <!-- <div>
                 <label for="">Berat</label>
                 <input type="number" id="berat">
@@ -35,8 +36,8 @@
                     <div class="padding-left">
                     <label for="">Jenis Kelamin</label>   <br>
                     
-                    <input type="radio" id="pria" value="Pria" name="jenkel" required> Pria
-                    <input type="radio" id="wanita" value="Wanita" name="jenkel" required>Wanita
+                    <input type="radio" value="Pria" name="jenkel" checked> Pria
+                    <input type="radio" value="Wanita" name="jenkel" >Wanita
                     </div>
                     
                     <div class="padding-left">    
@@ -94,19 +95,23 @@
         </header> -->
         <!-- Hasil Kalkulator -->
 
-        <div class="color-section text-center" id ="result">
+        <div class="color-section text-center" id ="resultBMI">
             <!-- <h4>Berat Badan</h4> -->
 
             <!-- <p id="result">24,5</p> -->
         </div>
 
         <!-- info dari Hasil-->
-        <div class="article">
+        <div class ="article" id ="adviceBMI">
+           
+        </div>
+
+        <div class="article" >
          <article>
-            <p> Hasil BMI </p>
+            <!-- <p> Hasil BMI </p>
             <p>
                 penjelasan hasil
-            </p><!--  pakai js -->
+            </p> pakai js -->
             <p>
                 BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
                 seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan khawatiran Anda terkait dengan
@@ -136,7 +141,7 @@
         <span> Made by p3my</span>
     </footer>
 
-    <script src="js/script.js"></script>
+    
 </body>
 
 
