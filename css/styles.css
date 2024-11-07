@@ -6,6 +6,12 @@ main{
     align-items: flex-start;
 }
 
+header{
+    text-shadow: 2px 2px 5px #00cffffc;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
 .article {
     max-width: 600px;
     text-align: justify;
@@ -116,11 +122,6 @@ button:hover {
 .store-button {
     text-decoration: none;
   }
-
-#result{
-    font-size: 30px;
-    font-weight: bold;
-}
 
 footer{
     text-align: center;

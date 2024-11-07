@@ -13,8 +13,8 @@ function calculateBMI() {
 
     // Validasi input
     if (isNaN(berat) || isNaN(tinggi) || tinggi <= 0 || berat <= 0 ) {
-        document.getElementById("resultBMI").innerHTML= "<h4> Silahkan masukkan nilai berat dan tinggi yang valid.</h4>";
-        document.getElementById("adviceBMI").textContent = "";
+        document.getElementById("result").innerHTML= "<h4> Silahkan masukkan nilai berat dan tinggi yang valid.</h4>";
+        document.getElementById("advice").textContent = "";
         return;
     }
 
@@ -48,7 +48,7 @@ function calculateBMI() {
     resultBMIText.innerHTML = `Hasil BMI Anda ${roundedBMI} <br> Anda memiliki berat badan ${category}`;
 
      // Temukan elemen div hasil
-     const resultBMIDiv = document.getElementById("resultBMI");
+     const resultBMIDiv = document.getElementById("result");
 
      // Kosongkan isi dari resultBMIDiv untuk menghindari penumpukan hasil
      resultBMIDiv.innerHTML = "";
@@ -56,6 +56,6 @@ function calculateBMI() {
      // Tambahkan header, hasil, dan pesan gender ke resultBMIDiv
      resultBMIDiv.appendChild(header);
      resultBMIDiv.appendChild(resultBMIText);
-     document.getElementById("adviceBMI").textContent = advice;
+     document.getElementById("advice").textContent = advice;
      
 }
